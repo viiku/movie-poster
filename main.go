@@ -101,17 +101,17 @@ func main() {
 	if err != nil {
 		log.Fatalf("Error fetching movie data: %v", err)
 	}
-	fmt.Print(movie)
+	// fmt.Print(movie)
 
 	// Download the poster
-	// if movie.Poster == "N/A" {
-	// 	log.Fatalf("No poster available for %s", movie.Title)
-	// }
-	// filename := movie.Title + ".jpg"
-	// err = downloadMoviePoster(movie.Poster, filename)
-	// if err != nil {
-	// 	log.Fatalf("Error downloading poster: %v", err)
-	// }
+	if movie.Poster == "N/A" {
+		log.Fatalf("No poster available for %s", movie.Title)
+	}
+	filename := movie.Title + ".jpg"
+	err = downloadMoviePoster(movie.Poster, filename)
+	if err != nil {
+		log.Fatalf("Error downloading poster: %v", err)
+	}
 
-	// fmt.Printf("Poster for %s downloaded as %s\n", movie.Title, filename)
+	fmt.Printf("Poster for %s downloaded as %s\n", movie.Title, filename)
 }
