@@ -1,5 +1,5 @@
 # movie-poster
-A command line tool written in go, works with different OMDB apis.
+A command line tool written in go, download movie poster form omdb and save in local.
 
 ### How to start...
 1. Set OMDB api key
